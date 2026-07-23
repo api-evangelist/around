@@ -1,21 +1,61 @@
 aid: around
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/around.png
 name: Around
-description: 'Around is a company surfaced as a portfolio company of wing-venture-capital and added to
-  the API Evangelist network as a stub for enrichment. Sector: plg. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'Around was a video-calling application built for designers, developers, and product teams,
+  known for floating circular "heads" that cropped participants to their faces so the call could sit on
+  top of the work rather than dominate the screen, plus echo prevention that let several people call from
+  the same room. Around was acquired by Miro in June 2022, operated for a period as Around by Miro Labs,
+  and was shut down on 31 March 2025, with features such as echo prevention and reactions folded into
+  Miro''s own video collaboration surface. The around.co domain is now parked on the GoDaddy/Afternic
+  aftermarket and the product, developer portal, and any API surface are gone. This profile is retained
+  in the API Evangelist network as a historical record; there is no live API to catalog.'
 url: https://raw.githubusercontent.com/api-evangelist/around/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - wing-venture-capital
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: defunct-no-api-surface
+x-lifecycle: defunct
+x-enrichment-note: 'Enrichment probe 2026-07-20 (re-verified): Around shut down 2025-03-31 following its
+  June 2022 acquisition by Miro. around.co now delegates to ns1/ns2.afternic.com and
+  https://www.around.co/ redirects cross-host to forsale.godaddy.com/forsale/www.around.co. Every probed
+  path (/.well-known/security.txt, /openid-configuration, /oauth-authorization-server, /api-catalog,
+  /ai-plugin.json, /llms.txt, /docs, /developers, /api, /openapi.json) returns HTTP 200 from the GoDaddy
+  parking catch-all — status codes alone are misleading here. All the .well-known and spec paths serve
+  text/html whose body is a JS redirect to /lander, not the advertised media type. TRAP WORTH NOTING
+  NETWORK-WIDE: /llms.txt returns text/plain and is a genuinely well-formed llms.txt, but it is
+  GoDaddy''s auto-generated FOR-SALE llms.txt describing the domain listing (Buy-It-Now / Make-an-Offer /
+  escrow terms) — it is not Around''s and must never be saved as a searched LLMsTxt artifact.
+  https://new.around.co no longer presents a valid certificate for that name (TLS unrecognized_name). The
+  GitHub org github.com/around is real and domain-verified for around.co, but publishes only .github,
+  around (product issue tracker), and around-oss (open-source license attributions) — no OpenAPI, SDK, or
+  specification repositories. No OpenAPI/AsyncAPI, packages, MCP server, well-known documents, changelog,
+  sandbox, or security program exist to search, generate, or derive. Zero artifacts written: any would be
+  fabrication.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-- Plg
+- Video
+- Video Conferencing
+- Collaboration
+- Remote Work
+- Communications
+- Defunct
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +65,10 @@ maintainers:
 common:
 - type: Website
   url: https://www.around.co/
+- type: GitHubOrganization
+  url: https://github.com/around
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
