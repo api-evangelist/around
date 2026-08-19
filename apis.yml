@@ -44,7 +44,7 @@ x-enrichment-note: 'Enrichment probe 2026-07-20 (re-verified): Around shut down 
   specification repositories. No OpenAPI/AsyncAPI, packages, MCP server, well-known documents, changelog,
   sandbox, or security program exist to search, generate, or derive. Zero artifacts written: any would be
   fabrication.'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
